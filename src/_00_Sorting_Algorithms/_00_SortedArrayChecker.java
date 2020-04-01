@@ -46,8 +46,8 @@ public class _00_SortedArrayChecker {
 	static boolean charArraySorted(char[] a) {
 		char x = a[0];
 		for(int i = 0; i < a.length; i++) {
-			if() {
-				
+			if(a[i] >= x) {
+				x = a[i];
 			}
 			else {
 				return false;
@@ -62,5 +62,16 @@ public class _00_SortedArrayChecker {
 	//   The method returns true if the String
 	//   array is in alphabetical order and false otherwise
 	//   (Use the compareTo(String) method)
-
+	static boolean stringArraySorted(String[] a) {
+		String x = a[0];
+		for(int i = 0; i < a.length; i++) {
+			if(x.compareTo(a[i]) <= 0) {
+				x = a[i];
+			}
+			else {
+				return false;
+			}
+		}
+		return true;
+	}
 }
